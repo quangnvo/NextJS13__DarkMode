@@ -18,9 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider>
-          <div className='flex justify-center items-center py-10 mb-20'>
+      <body
+        className={`antialiased min-h-screen bg-white dark:bg-gray-950 ${inter.className}`}
+      >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className='flex justify-center items-center py-10 mb-20 '>
             <ModeToggle />
           </div>
           {children}
